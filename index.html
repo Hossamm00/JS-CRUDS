@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>crud</h2>
+            <span>product managment system</span>
+        </div><!-- /head -->
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small id="total"></small>
+            </div><!-- /price -->
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">creat</button>
+        </div><!-- /inputs -->
+        <div class="ouputs">
+            <div class="serchblock">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="serch" id="serch">
+                <div class="btnserch">
+                    <button onclick="getsearchmood(this.id)" id="serchtitle">serch by title</button>
+                    <button onclick="getsearchmood(this.id)" id="serchCategory">serch by category</button>
+                </div><!-- /btnserch -->
+            </div><!-- /serchblock -->
+        </div><!--ouputs  -->
+        <div id="deleteall"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delet</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div><!-- /crud -->
+
+    <script src="main.js"></script>
+</body>
+</html>
